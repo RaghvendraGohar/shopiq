@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'; // Import Link from next/link
 import '../styles/Footer.css';
 
 const Footer: React.FC = () => {
@@ -11,10 +12,10 @@ const Footer: React.FC = () => {
         </div>
         <div className="footer-right">
           <ul className="footer-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/categories">Categories</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/categories">Categories</Link></li>
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>
       </div>

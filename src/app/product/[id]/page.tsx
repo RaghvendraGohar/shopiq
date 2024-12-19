@@ -1,4 +1,6 @@
 import { fetchProductById } from '@/utils/api';
+import Image from 'next/image';
+
 import '../../../styles/ProductDetails.css';
 import { Key } from 'react';
 
@@ -12,9 +14,14 @@ const ProductDetails = async ({ params }: ProductDetailsProps) => {
   return (
     <div className="product-details">
       <div className="image-carousel">
-        {product.images.map((img: string | undefined, index: Key | null | undefined) => (
-          <img key={index} src={img} alt={product.title} />
-        ))}
+      <Image
+          src={product.images[0]} 
+         alt={product.title}
+          layout="intrinsic"
+          width={500} // Define the width
+          height={500} // Define the height
+          objectFit="contain" // Optional: adjust how the image fits inside the container
+        />
       </div>
       <div className="info">
         <h1>{product.title}</h1>
