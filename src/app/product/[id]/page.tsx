@@ -8,7 +8,7 @@ interface ProductDetailsProps {
 }
 
 const ProductDetails = async ({ params }: ProductDetailsProps) => {
-  const { id } = await params;  // Resolve the Promise
+  const { id } = await params;  
   const product = await fetchProductById(Number(id));
 
   return (
@@ -18,9 +18,9 @@ const ProductDetails = async ({ params }: ProductDetailsProps) => {
           src={product.images[0]} 
           alt={product.title}
           layout="intrinsic"
-          width={500} // Define the width
-          height={500} // Define the height
-          objectFit="contain" // Optional: adjust how the image fits inside the container
+          width={500} 
+          height={500} 
+          objectFit="contain" 
         />
       </div>
       <div className="info">
