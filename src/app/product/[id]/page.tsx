@@ -2,7 +2,6 @@ import { fetchProductById } from '@/utils/api';
 import Image from 'next/image';
 
 import '../../../styles/ProductDetails.css';
-import { Key } from 'react';
 
 interface ProductDetailsProps {
   params: { id: string };
