@@ -1,0 +1,36 @@
+.navbar {
+    background: var(--card-bg);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .navbar .logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+  }
+  
+  .navbar .menu {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .navbar .menu li {
+    list-style: none;
+    padding: 8px 16px;
+    background: var(--button-bg);
+    border-radius: 8px;
+    color: var(--text-color);
+    transition: background 0.3s ease;
+  }
+  
+  .navbar .menu li:hover {
+    background: var(--button-hover);
+  }
+  

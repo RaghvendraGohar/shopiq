@@ -1,0 +1,21 @@
+.btn {
+    padding: 12px 24px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    background: var(--button-bg);
+    color: var(--text-color);
+    border-radius: 8px;
+    border: 1px solid var(--button-bg);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background: var(--button-hover);
+    transform: scale(1.05);
+  }
+  
+  .btn:disabled {
+    background: #555;
+    cursor: not-allowed;
+  }
+  
