@@ -1,5 +1,5 @@
 import { fetchProductById } from '@/utils/api';
-import './ProductDetails.css';
+import '../../../styles/ProductDetails.css';
 import { Key } from 'react';
 
 interface ProductDetailsProps {
