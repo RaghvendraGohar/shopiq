@@ -4,18 +4,19 @@ import Image from 'next/image';
 import '../../../styles/ProductDetails.css';
 
 interface ProductDetailsProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 const ProductDetails = async ({ params }: ProductDetailsProps) => {
-  const product = await fetchProductById(Number(params.id));
+  const { id } = await params;  // Resolve the Promise
+  const product = await fetchProductById(Number(id));
 
   return (
     <div className="product-details">
       <div className="image-carousel">
-      <Image
+        <Image
           src={product.images[0]} 
-         alt={product.title}
+          alt={product.title}
           layout="intrinsic"
           width={500} // Define the width
           height={500} // Define the height
